@@ -1,5 +1,7 @@
+import Header from '@/app.feature/header';
 import './globals.css';
 import type { Metadata } from 'next';
+import { useEffect } from 'react';
 
 export const metadata: Metadata = {
   title: 'caseBread`s devlog',
@@ -14,7 +16,7 @@ export default function RootLayout({
   return (
     <html lang="en" className="font-mono">
       <body>
-        <header>헤더입니다.</header>
+        <Header />
         {children}
       </body>
     </html>

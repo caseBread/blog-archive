@@ -14,7 +14,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className="font-mono">
+    <html lang="en" className="font-sans">
       <body>
         <Header />
         {children}

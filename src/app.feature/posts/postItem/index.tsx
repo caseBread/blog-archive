@@ -1,9 +1,10 @@
 import Image from 'next/image';
 import TagList from './tagList';
+import Link from 'next/link';
 
 const PostItem = () => {
   return (
-    <div className="flex py-4 border-b-1 border-gray-200">
+    <a href="/posts/1" className="flex py-4 border-b-1 border-gray-200">
       <div>
         <Image
           className="rounded-lg bg-slate-400"
@@ -23,7 +24,7 @@ const PostItem = () => {
         </div>
         <TagList />
       </div>
-    </div>
+    </a>
   );
 };
 

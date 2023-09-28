@@ -9,19 +9,24 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "contentlayer": "^0.3.4",
+    "next": "^13.5.3",
+    "next-contentlayer": "^0.3.4",
     "react": "latest",
     "react-dom": "latest",
-    "next": "latest"
+    "rehype-highlight": "^7.0.0",
+    "rehype-pretty-code": "^0.10.1",
+    "shiki": "^0.14.4"
   },
   "devDependencies": {
-    "typescript": "latest",
-    "@types/react": "latest",
     "@types/node": "latest",
+    "@types/react": "latest",
     "@types/react-dom": "latest",
     "autoprefixer": "latest",
+    "eslint": "latest",
+    "eslint-config-next": "latest",
     "postcss": "latest",
     "tailwindcss": "latest",
-    "eslint": "latest",
-    "eslint-config-next": "latest"
+    "typescript": "latest"
   }
 }

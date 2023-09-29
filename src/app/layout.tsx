@@ -1,6 +1,6 @@
-import Header from '@/app.feature/header';
 import './globals.css';
 import type { Metadata } from 'next';
+import HeaderContainer from '@/app.feature/header/HeaderContainer';
 
 export const metadata: Metadata = {
   title: 'caseBread`s devlog',
@@ -12,8 +12,12 @@ const RootLayout = ({ children }: { children: React.ReactNode }) => {
     <html lang="ko" className="font-sans">
       <head />
       <body>
-        <Header />
-        {children}
+        <header>
+          <HeaderContainer />
+        </header>
+        <main className="m-auto" style={{ maxWidth: '1056px' }}>
+          {children}
+        </main>
       </body>
     </html>
   );

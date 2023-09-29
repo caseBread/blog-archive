@@ -1,7 +1,7 @@
 import HeaderLogo from './logo';
 import HeaderMenu from './menu';
 
-const Header: React.FC = () => {
+const HeaderContainer: React.FC = () => {
   return (
     <div
       className="border-b-gray-300 border-b-1 flex justify-between items-center px-10 font-mono"
@@ -13,4 +13,4 @@ const Header: React.FC = () => {
   );
 };
 
-export default Header;
+export default HeaderContainer;

@@ -3,7 +3,7 @@ type TProps = {
 };
 
 const MDXContent: React.FC<TProps> = ({ component }) => {
-  return <div className="mt-[60px]">{component}</div>;
+  return <div className="markdown-body">{component}</div>;
 };
 
 export default MDXContent;

@@ -6,7 +6,7 @@ const PostDetailHeader: React.FC<{
   tags?: string[];
 }> = ({ title, createdAt, tags }) => {
   return (
-    <div>
+    <div className="mb-[60px]">
       <h1 className="text-5xl font-bold mb-[21px]">{title}</h1>
       <div className="flex gap-[60px]">
         <span>

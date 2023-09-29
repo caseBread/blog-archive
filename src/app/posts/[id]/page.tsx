@@ -29,7 +29,7 @@ const Page = ({ params }: TPageProps) => {
   const MDXComponent = useMDXComponent(post.body.code);
 
   return (
-    <article className="pt-[70px] px-4">
+    <article className="mt-[70px] px-4 m-auto" style={{ maxWidth: '860px' }}>
       <header>
         <PostDetailHeader title={title} createdAt={createdAt} tags={tags} />
       </header>

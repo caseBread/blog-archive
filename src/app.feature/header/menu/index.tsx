@@ -12,7 +12,7 @@ const HeaderMenu = () => {
           height="20"
         />
       </button>
-      <Link href="/about">about</Link>
+      <Link href="/posts/about.mdx">about</Link>
       <Link href="/posts">posts</Link>
     </div>
   );

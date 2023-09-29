@@ -20,6 +20,9 @@ const config: Config = {
         'gray-800': 'var(--color-gray-800)',
         'gray-900': 'var(--color-gray-900)',
       },
+      backgroundColor: {
+        default: 'var(--background)',
+      },
 
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',

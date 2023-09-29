@@ -1,12 +1,16 @@
 import Image from 'next/image';
 import TagList from './tagList';
 import { Post } from '@/contentlayer/generated';
+import Link from 'next/link';
 
 const PostItem: React.FC<{ post: Post }> = ({ post }) => {
   const redirectPostUrl = `/posts/${post._id}`;
 
   return (
-    <a href={redirectPostUrl} className="flex py-4 border-b-1 border-gray-200">
+    <Link
+      href={redirectPostUrl}
+      className="flex py-4 border-b-1 border-gray-200"
+    >
       <div>
         <Image
           className="rounded-lg bg-slate-400"
@@ -28,7 +32,7 @@ const PostItem: React.FC<{ post: Post }> = ({ post }) => {
         </div>
         <TagList tags={post.tags} />
       </div>
-    </a>
+    </Link>
   );
 };
 

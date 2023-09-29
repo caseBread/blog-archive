@@ -3,6 +3,7 @@ import '@/app.styled/markdown/github-markdown.css';
 import '@/app.styled/markdown/github-markdown-light.css';
 import type { Metadata } from 'next';
 import HeaderContainer from '@/app.feature/header/HeaderContainer';
+import DynamicDarkmodeCss from '@/app.modules/dynamic/DynamicDarkmodeCss';
 
 export const metadata: Metadata = {
   title: 'caseBread`s devlog',
@@ -11,8 +12,10 @@ export const metadata: Metadata = {
 
 const RootLayout = ({ children }: { children: React.ReactNode }) => {
   return (
-    <html lang="ko" className="font-sans">
-      <head />
+    <html lang="ko" className="font-sans bg-default text-gray-900">
+      <head>
+        <DynamicDarkmodeCss />
+      </head>
       <body>
         <header>
           <HeaderContainer />

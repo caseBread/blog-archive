@@ -1,4 +1,4 @@
-import './globals.css';
+import '@/app.styled/globals.css';
 import '@/app.styled/markdown/github-markdown.css';
 import '@/app.styled/markdown/github-markdown-light.css';
 import type { Metadata } from 'next';

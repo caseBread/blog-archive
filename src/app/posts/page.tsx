@@ -18,7 +18,9 @@ const PostsPage = async () => {
       <div className="mt-12 mb-10">
         <h1 className="text-5xl font-bold">기술블로그</h1>
       </div>
-      <PostItem />
+      {posts.map((post, idx) => (
+        <PostItem key={post._id} post={post} />
+      ))}
     </div>
   );
 };

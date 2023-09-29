@@ -1,8 +1,13 @@
-const TagList = () => {
+const TagList: React.FC<{ tags?: string[] }> = ({ tags }) => {
+  if (!tags) return null;
+
   return (
     <div className="flex gap-7">
-      <span className="before:content-['#']">태그1</span>
-      <span className="before:content-['#']">태그2</span>
+      {tags.map((tag, idx) => (
+        <span className="before:content-['#']" key={tag}>
+          {tag}
+        </span>
+      ))}
     </div>
   );
 };

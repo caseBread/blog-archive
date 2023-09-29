@@ -23,9 +23,10 @@ export const Post = defineDocumentType(() => ({
       type: 'string',
       required: true,
     },
-    category: {
-      type: 'string',
-      required: true,
+    tags: {
+      type: 'list',
+      of: { type: 'string' },
+      required: false,
     },
     thumbnail: {
       type: 'string',
@@ -40,7 +41,7 @@ export const Post = defineDocumentType(() => ({
 
 const contentSource = makeSource({
   // 마크다운 파일이 저장되어 있는 루트 폴더
-  contentDirPath: 'posts',
+  contentDirPath: '_posts',
   documentTypes: [Post],
   mdx: {
     remarkPlugins: [],

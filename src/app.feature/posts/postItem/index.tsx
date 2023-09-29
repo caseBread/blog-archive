@@ -1,6 +1,5 @@
 import Image from 'next/image';
 import TagList from './tagList';
-import Link from 'next/link';
 
 const PostItem = () => {
   return (

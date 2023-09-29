@@ -23,6 +23,11 @@ const RootLayout = ({ children }: { children: React.ReactNode }) => {
         <main className="m-auto" style={{ maxWidth: '1056px' }}>
           {children}
         </main>
+        <footer className="my-8 flex">
+          <span className="m-auto text-xs text-gray-600">
+            Copyright © Geonu Kim. All Rights Reserved.
+          </span>
+        </footer>
       </body>
     </html>
   );

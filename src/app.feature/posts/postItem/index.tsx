@@ -11,19 +11,22 @@ const PostItem: React.FC<{ post: Post }> = ({ post }) => {
       href={redirectPostUrl}
       className="flex py-4 border-b-1 border-gray-200"
     >
-      <div>
+      <div className="mr-12 min-w-[170px] h-[170px] relative max-sm:hidden">
         <Image
-          className="rounded-lg bg-slate-400"
+          className="rounded-lg"
           src={post.thumbnail ?? ''}
           alt="썸네일"
-          width="170"
-          height="170"
+          loading="lazy"
+          fill
+          objectFit="cover"
         />
       </div>
-      <div className="pl-12">
+      <div className="">
         <div className="py-3">
-          <h2 className="pb-5 font-semibold text-2xl">{post.title}</h2>
-          <p className="pb-3 font-normal text-base text-gray-800">
+          <h2 className="mb-5 font-semibold text-2xl line-clamp-2">
+            {post.title}
+          </h2>
+          <p className="mb-3 font-normal text-base text-gray-800 line-clamp-2">
             {post.description}
           </p>
           <time className="font-normal text-sm text-gray-700">

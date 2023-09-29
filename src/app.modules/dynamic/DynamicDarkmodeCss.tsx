@@ -3,7 +3,8 @@ import { useEffect, useState } from 'react';
 
 const DynamicDarkmodeCss = () => {
   const [isDarkMode, setIsDarkMode] = useState(
-    window.matchMedia &&
+    typeof window === undefined &&
+      window.matchMedia &&
       window.matchMedia('(prefers-color-scheme: dark)').matches
   );
 

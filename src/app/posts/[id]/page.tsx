@@ -1,5 +1,6 @@
 import MDXContent from '@/app.feature/posts/postDetail/MDXcontent';
 import PostDetailHeader from '@/app.feature/posts/postDetail/postDetailHeader';
+import { formatIsoToYYYY_MM_DD } from '@/app.utils/formatDate';
 import { Post, allPosts } from '@/contentlayer/generated';
 import { useMDXComponent } from 'next-contentlayer/hooks';
 
@@ -25,13 +26,18 @@ const Page = ({ params }: TPageProps) => {
   const post = getPost(postId);
 
   const { title, createdAt, tags } = post;
+  const formattedCreatedAt = formatIsoToYYYY_MM_DD(createdAt);
 
   const MDXComponent = useMDXComponent(post.body.code);
 
   return (
     <article className="mt-[70px] px-4 m-auto" style={{ maxWidth: '860px' }}>
       <header>
-        <PostDetailHeader title={title} createdAt={createdAt} tags={tags} />
+        <PostDetailHeader
+          title={title}
+          createdAt={formattedCreatedAt}
+          tags={tags}
+        />
       </header>
       <section>
         <MDXContent component={<MDXComponent />} />

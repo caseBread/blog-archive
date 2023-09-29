@@ -2,9 +2,12 @@ import Image from 'next/image';
 import TagList from './tagList';
 import { Post } from '@/contentlayer/generated';
 import Link from 'next/link';
+import { formatIsoToYYYY_MM_DD } from '@/app.utils/formatDate';
 
 const PostItem: React.FC<{ post: Post }> = ({ post }) => {
   const redirectPostUrl = `/posts/${post._id}`;
+
+  const formattedCreatedAt = formatIsoToYYYY_MM_DD(post.createdAt);
 
   return (
     <Link
@@ -30,7 +33,7 @@ const PostItem: React.FC<{ post: Post }> = ({ post }) => {
             {post.description}
           </p>
           <time className="font-normal text-sm text-gray-700">
-            {post.createdAt}
+            {formattedCreatedAt}
           </time>
         </div>
         <TagList tags={post.tags} />
